@@ -42,9 +42,4 @@ describe('Single Movie Details View', () => {
     cy.visit('http://localhost:3000/movies/337401');
     cy.get('.home').click().url().should('not.include', 'movies');
   });
-
-  it('Should be able to click the back button and be taken back to the home page', () => {
-    cy.visit('http://localhost:3000/movies/337401');
-    cy.get('.back-btn').click().url().should('not.include', 'movies');
-  });
 });

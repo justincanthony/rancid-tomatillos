@@ -56,6 +56,7 @@ class App extends Component {
               return <MovieDetails id={parseInt(params.movie_id)} />;
             }}
           />
+          <Route component={() => <Error message={this.state.errors} />} />
         </Switch>
       </div>
     );

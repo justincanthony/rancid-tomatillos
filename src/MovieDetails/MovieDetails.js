@@ -17,11 +17,13 @@ const MovieDetails = ({ id }) => {
   return (
     <section className="movie-details">
       <div className="movie-image-fade" />
-      <img
-        className="movie-image"
-        src={currentMovie.backdrop_path}
-        alt={currentMovie.title}
-      />
+      {currentMovie.backdrop_path && (
+        <img
+          className="movie-image"
+          src={currentMovie.backdrop_path}
+          alt={currentMovie.title}
+        />
+      )}
       <h1 className="movie-title">{currentMovie.title}</h1>
       {currentMovie.tagline && (
         <p className="tagline">{currentMovie.tagline}</p>

@@ -6,7 +6,7 @@ const MovieCard = ({ img, title, rating, id }) => {
       <img className="movie-poster" src={img} alt="movie poster" />
       <div className="movie-text">
         <h3>{title}</h3>
-        <p>{Math.floor(rating)} out of 10</p>
+        <p>{Math.floor(rating)}/10</p>
       </div>
     </article>
   );
